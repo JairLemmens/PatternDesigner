@@ -1,0 +1,13 @@
+:root {
+  --primary: #6366f1;
+  --accent: #f59e0b;
+  --warning: #f50b0b;
+  --card: #ffffff;
+  --foreground: #111827;
+  --muted-foreground: #6b7280;
+  --input: #d1d5db;
+  --background: #ffffff;
+  --inspector: #fafafa;
+}
+
+.field { height: 32px; width: 100%; padding: 0 8px; border: 1px solid #d1d5db; background: #fff; font-size: 13px; border-radius: 4px; }
