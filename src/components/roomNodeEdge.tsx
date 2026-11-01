@@ -5,6 +5,15 @@ import {
   useInternalNode,
   type EdgeProps,
 } from "@xyflow/react";
+import type { InspectorSchema } from "./inspectorFields";
+
+export const RoomNodeEdgeInspector: InspectorSchema = {
+  title: "Connection",
+  fields: [
+    { key: "kind", label: "Kind", type: "select", options: ["connected", "visual"], defaultValue: "connected", optionLabels: { connected: "adjacent", visual: "visual" } },
+    { key: "boundarystyle", label: "Boundary style", type: "select", options: ["door", "open", "closed"], defaultValue: "connected" },
+  ],
+};
 
 export function RoomNodeEdge({ id, source, target, style, data, selected }: EdgeProps) {
   const s = useInternalNode(source);
