@@ -3,9 +3,9 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import "@xyflow/react/dist/style.css";
 import React, { useState, useCallback, useRef, useEffect } from "react";
 import * as THREE from "three";
-import {Row, btnStyle } from "./components/ui";
-import Field from "./components/field"
-import getMaterialRange from "./utils/getMaterialRange";
+import { Row } from "@/shared/components/ui";
+import Field from "@/shared/components/field"
+import getMaterialRange from "../getMaterialRange";
 
 const editableKeys = ["construction"];
 
@@ -42,12 +42,12 @@ function Toolbar({activeMode, setActiveMode }: {
 }) {
   return (
     <div style={{ display: "flex" }}>
-      {(["Default", "Gradient"] as const).map((mode, i) => (
+      {(["Default", "Gradient"] as const).map((mode) => (
         <button
           key={mode}
           onClick={() => setActiveMode(mode)}
           style={{
-            height: 32, padding: "0 12px", background: "#6366f1",color: "#ffffff" ,border:'none', borderRadius: 4, fontSize: 12, fontWeight: 500, cursor: "pointer", display: "flex", alignItems: "center", gap: 6 
+            height: 32, padding: "0 12px", background: activeMode === mode ? "#4f46e5" : "#6366f1", color: "#ffffff", border: "none", borderRadius: 4, fontSize: 12, fontWeight: 500, cursor: "pointer", display: "flex", alignItems: "center", gap: 6 
           }}
         >
           {mode}
@@ -239,3 +239,4 @@ export function Viewer() {
     </div>
   );
 }
+

@@ -1,0 +1,1639 @@
+{
+  "nodes": [
+    {
+      "id": "89b1e138-0edc-42ce-bb36-001e76df72db",
+      "type": "room",
+      "position": {
+        "x": -337.403,
+        "y": -296.980
+      },
+      "data": {
+        "label": "Public Gathering Space",
+        "description": "300–450 m² flexible outdoor space for markets and events. Provide strong circulation and a visual connection to the gorge, with weather-resilient design.",
+        "area": 250,
+        "type": "Exterior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#bbf7d0"
+      },
+      "measured": {
+        "width": 194,
+        "height": 194
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "b2a6dff2-b839-4e51-9218-bb6db2de6e41",
+      "type": "room",
+      "position": {
+        "x": 210.912,
+        "y": -39.879
+      },
+      "data": {
+        "label": "Indoor Vendor Stall 01",
+        "description": "One of 16 indoor vendor stalls. Target area: 18–20 m². Provide power and water.",
+        "area": 19,
+        "type": "Interior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fde68a"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "477d3c0b-e4e4-4d81-9072-9aa259cd0435",
+      "type": "room",
+      "position": {
+        "x": 369.389,
+        "y": 12.506
+      },
+      "data": {
+        "label": "Indoor Vendor Stall 02",
+        "description": "One of 16 indoor vendor stalls. Target area: 18–20 m². Provide power and water.",
+        "area": 19,
+        "type": "Interior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fde68a"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "bdff0175-1d3a-46ec-91fe-5af4e8d3dae0",
+      "type": "room",
+      "position": {
+        "x": 519.501,
+        "y": 87.257
+      },
+      "data": {
+        "label": "Indoor Vendor Stall 03",
+        "description": "One of 16 indoor vendor stalls. Target area: 18–20 m². Provide power and water.",
+        "area": 19,
+        "type": "Interior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fde68a"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "baa20042-4615-436b-900e-d512a7ea42bb",
+      "type": "room",
+      "position": {
+        "x": 607.846,
+        "y": 191.938
+      },
+      "data": {
+        "label": "Indoor Vendor Stall 04",
+        "description": "One of 16 indoor vendor stalls. Target area: 18–20 m². Provide power and water.",
+        "area": 19,
+        "type": "Interior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fde68a"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "5ceeaeb3-73e9-47f9-a2a7-c66471f82e9a",
+      "type": "room",
+      "position": {
+        "x": 735.089,
+        "y": 305.030
+      },
+      "data": {
+        "label": "Indoor Vendor Stall 05",
+        "description": "One of 16 indoor vendor stalls. Target area: 18–20 m². Provide power and water.",
+        "area": 19,
+        "type": "Interior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fde68a"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "42d9cc15-3cc5-4eef-8a3c-c86446f3f849",
+      "type": "room",
+      "position": {
+        "x": 608.475,
+        "y": 420.516
+      },
+      "data": {
+        "label": "Indoor Vendor Stall 06",
+        "description": "One of 16 indoor vendor stalls. Target area: 18–20 m². Provide power and water.",
+        "area": 19,
+        "type": "Interior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fde68a"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "6ef90d8f-f519-4a39-8fcd-f09641085ffb",
+      "type": "room",
+      "position": {
+        "x": 933.024,
+        "y": -555.500
+      },
+      "data": {
+        "label": "Indoor Vendor Stall 07",
+        "description": "One of 16 indoor vendor stalls. Target area: 18–20 m². Provide power and water.",
+        "area": 19,
+        "type": "Interior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fde68a"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "eb27899b-1a05-4b14-9791-de65c0bce5e3",
+      "type": "room",
+      "position": {
+        "x": 799.922,
+        "y": -432.890
+      },
+      "data": {
+        "label": "Indoor Vendor Stall 08",
+        "description": "One of 16 indoor vendor stalls. Target area: 18–20 m². Provide power and water.",
+        "area": 19,
+        "type": "Interior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fde68a"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "3e810cb3-6adf-4c1c-a299-540ffc91362a",
+      "type": "room",
+      "position": {
+        "x": 693.107,
+        "y": -290.755
+      },
+      "data": {
+        "label": "Indoor Vendor Stall 09",
+        "description": "One of 16 indoor vendor stalls. Target area: 18–20 m². Provide power and water.",
+        "area": 19,
+        "type": "Interior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fde68a"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "290ba2fc-48f3-467b-aa33-d05046e238bd",
+      "type": "room",
+      "position": {
+        "x": 541.831,
+        "y": -329.092
+      },
+      "data": {
+        "label": "Indoor Vendor Stall 10",
+        "description": "One of 16 indoor vendor stalls. Target area: 18–20 m². Provide power and water.",
+        "area": 19,
+        "type": "Interior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fde68a"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "1566ca0d-7f65-49cf-a5d2-55ad669fe010",
+      "type": "room",
+      "position": {
+        "x": 361.403,
+        "y": -340.347
+      },
+      "data": {
+        "label": "Indoor Vendor Stall 11",
+        "description": "One of 16 indoor vendor stalls. Target area: 18–20 m². Provide power and water.",
+        "area": 19,
+        "type": "Interior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fde68a"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "9e602329-428e-464d-9853-eb39d4791f42",
+      "type": "room",
+      "position": {
+        "x": 996.065,
+        "y": 249.546
+      },
+      "data": {
+        "label": "Indoor Vendor Stall 12",
+        "description": "One of 16 indoor vendor stalls. Target area: 18–20 m². Provide power and water.",
+        "area": 19,
+        "type": "Interior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fde68a"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "9299f27e-9ccf-40d5-a98c-ae4d30d31ffe",
+      "type": "room",
+      "position": {
+        "x": 965.552,
+        "y": 76.203
+      },
+      "data": {
+        "label": "Indoor Vendor Stall 13",
+        "description": "One of 16 indoor vendor stalls. Target area: 18–20 m². Provide power and water.",
+        "area": 19,
+        "type": "Interior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fde68a"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "aa9b3a17-ea02-4f9a-844a-98dc322c473f",
+      "type": "room",
+      "position": {
+        "x": 969.016,
+        "y": -63.001
+      },
+      "data": {
+        "label": "Indoor Vendor Stall 14",
+        "description": "One of 16 indoor vendor stalls. Target area: 18–20 m². Provide power and water.",
+        "area": 19,
+        "type": "Interior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fde68a"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "74f3f119-5f26-4c66-a7e4-0c1a74b34f20",
+      "type": "room",
+      "position": {
+        "x": 1015.383,
+        "y": -198.523
+      },
+      "data": {
+        "label": "Indoor Vendor Stall 15",
+        "description": "One of 16 indoor vendor stalls. Target area: 18–20 m². Provide power and water.",
+        "area": 19,
+        "type": "Interior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fde68a"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "972683e0-ad8e-4840-bbb2-a72d4fdd79c5",
+      "type": "room",
+      "position": {
+        "x": 1219.420,
+        "y": -207.642
+      },
+      "data": {
+        "label": "Indoor Vendor Stall 16",
+        "description": "One of 16 indoor vendor stalls. Target area: 18–20 m². Provide power and water.",
+        "area": 19,
+        "type": "Interior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fde68a"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "87b0886f-98af-4f55-ae71-2598fd2e05cc",
+      "type": "room",
+      "position": {
+        "x": -580.370,
+        "y": -271.034
+      },
+      "data": {
+        "label": "Covered Vendor Stall 01",
+        "description": "One of 6–8 covered outdoor vendor stalls. Target area: 18–20 m². Ensure water access.",
+        "area": 19,
+        "type": "Exterior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fed7aa"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "963d5182-5456-4c40-8c61-3cd28e7b6585",
+      "type": "room",
+      "position": {
+        "x": -561.623,
+        "y": -126.883
+      },
+      "data": {
+        "label": "Covered Vendor Stall 02",
+        "description": "One of 6–8 covered outdoor vendor stalls. Target area: 18–20 m². Ensure water access.",
+        "area": 19,
+        "type": "Exterior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fed7aa"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "a57ac890-5fe0-456e-9082-dea798eb2be5",
+      "type": "room",
+      "position": {
+        "x": -506.431,
+        "y": -9.820
+      },
+      "data": {
+        "label": "Covered Vendor Stall 03",
+        "description": "One of 6–8 covered outdoor vendor stalls. Target area: 18–20 m². Ensure water access.",
+        "area": 19,
+        "type": "Exterior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fed7aa"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "a9c4e3c5-9ab8-4d1f-a2d7-f2b9d52ec69d",
+      "type": "room",
+      "position": {
+        "x": -398.241,
+        "y": 70.740
+      },
+      "data": {
+        "label": "Covered Vendor Stall 04",
+        "description": "One of 6–8 covered outdoor vendor stalls. Target area: 18–20 m². Ensure water access.",
+        "area": 19,
+        "type": "Exterior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fed7aa"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "47820030-0cd3-47a1-91f7-3c836f9bad3b",
+      "type": "room",
+      "position": {
+        "x": -259.500,
+        "y": 76.131
+      },
+      "data": {
+        "label": "Covered Vendor Stall 05",
+        "description": "One of 6–8 covered outdoor vendor stalls. Target area: 18–20 m². Ensure water access.",
+        "area": 19,
+        "type": "Exterior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fed7aa"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "839f9eee-d0d4-486d-bdc4-b9d97656e00f",
+      "type": "room",
+      "position": {
+        "x": -129.993,
+        "y": 32.168
+      },
+      "data": {
+        "label": "Covered Vendor Stall 06",
+        "description": "One of 6–8 covered outdoor vendor stalls. Target area: 18–20 m². Ensure water access.",
+        "area": 19,
+        "type": "Exterior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fed7aa"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "e2fe6ded-81d9-48e8-8751-dbe2b076140b",
+      "type": "room",
+      "position": {
+        "x": -12.454,
+        "y": -61.118
+      },
+      "data": {
+        "label": "Covered Vendor Stall 07",
+        "description": "One of 6–8 covered outdoor vendor stalls. Target area: 18–20 m². Ensure water access.",
+        "area": 19,
+        "type": "Exterior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fed7aa"
+      },
+      "measured": {
+        "width": 102,
+        "height": 102
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "d3862bb9-9010-421c-a2ab-9da1c4113790",
+      "type": "room",
+      "position": {
+        "x": -99.279,
+        "y": -471.707
+      },
+      "data": {
+        "label": "Food Truck Location 01",
+        "description": "One of 2–3 food truck locations. Target area: 35–40 m². Provide water access.",
+        "area": 37.5,
+        "type": "Exterior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fecaca"
+      },
+      "measured": {
+        "width": 134,
+        "height": 134
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "5e093929-6ee1-4313-a29b-eaeb3c01da50",
+      "type": "room",
+      "position": {
+        "x": -294.278,
+        "y": -551.021
+      },
+      "data": {
+        "label": "Food Truck Location 02",
+        "description": "One of 2–3 food truck locations. Target area: 35–40 m². Provide water access.",
+        "area": 37.5,
+        "type": "Exterior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fecaca"
+      },
+      "measured": {
+        "width": 134,
+        "height": 134
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dab0472d-7974-4777-b1a1-c8d8574048e9",
+      "type": "room",
+      "position": {
+        "x": -496.827,
+        "y": -484.029
+      },
+      "data": {
+        "label": "Food Truck Location 03",
+        "description": "One of 2–3 food truck locations. Target area: 35–40 m². Provide water access.",
+        "area": 37.5,
+        "type": "Exterior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fecaca"
+      },
+      "measured": {
+        "width": 134,
+        "height": 134
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "c29750c2-9109-4a6c-b1f0-ce812e65f92d",
+      "type": "room",
+      "position": {
+        "x": 403.417,
+        "y": -590.496
+      },
+      "data": {
+        "label": "Loading and Unloading",
+        "description": "Dedicated area for vendor loading and unloading, connected to the market hall service route.",
+        "area": 30,
+        "type": "Exterior Space",
+        "privacy": 1,
+        "facade": "Default",
+        "daylight": false,
+        "roomheight": 3,
+        "color": "#e5e7eb"
+      },
+      "measured": {
+        "width": 123,
+        "height": 123
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "b7a95aff-5622-4661-a947-fc64394fed3c",
+      "type": "room",
+      "position": {
+        "x": 61.685,
+        "y": -335.016
+      },
+      "data": {
+        "label": "Shared Kitchen",
+        "description": "40–60 m² shared kitchen with food preparation facilities to support the vendor program.",
+        "area": 50,
+        "type": "Interior Space",
+        "privacy": 1,
+        "facade": "Default",
+        "daylight": false,
+        "roomheight": 3,
+        "color": "#fed7aa"
+      },
+      "measured": {
+        "width": 151,
+        "height": 151
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "9cdb05bd-4f77-45ca-930c-c998db559a65",
+      "type": "room",
+      "position": {
+        "x": 238.216,
+        "y": -661.065
+      },
+      "data": {
+        "label": "Trash and Recycling",
+        "description": "Dedicated waste sorting, trash, and recycling support space; final area to be confirmed.",
+        "area": 20,
+        "type": "Interior Space",
+        "privacy": 1,
+        "facade": "Default",
+        "daylight": false,
+        "roomheight": 3,
+        "color": "#d1d5db"
+      },
+      "measured": {
+        "width": 104,
+        "height": 104
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "e3117e2e-efc8-4e10-9f70-fba25e6ef304",
+      "type": "room",
+      "position": {
+        "x": 581.685,
+        "y": -719.303
+      },
+      "data": {
+        "label": "HVAC",
+        "description": "Building HVAC and associated equipment space; final area to be confirmed.",
+        "area": 20,
+        "type": "Interior Space",
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": false,
+        "roomheight": 3,
+        "color": "#bfdbfe"
+      },
+      "measured": {
+        "width": 104,
+        "height": 104
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "a9c2930d-4da7-4cf5-9311-598f29b09d6f",
+      "type": "group",
+      "position": {
+        "x": -720.481,
+        "y": -274.608
+      },
+      "style": {
+        "width": 600,
+        "height": 400
+      },
+      "zIndex": -1,
+      "draggable": false,
+      "data": {
+        "name": "Covered Outdoor Vendor Area",
+        "description": "Covered area with 6–8 vendor stalls, water access, and weather-resilient circulation.",
+        "color": "#fed7aa",
+        "memberIds": [
+          "27a5b814-2030-457f-b0ed-742b4877e90b",
+          "87b0886f-98af-4f55-ae71-2598fd2e05cc",
+          "963d5182-5456-4c40-8c61-3cd28e7b6585",
+          "a9c4e3c5-9ab8-4d1f-a2d7-f2b9d52ec69d",
+          "47820030-0cd3-47a1-91f7-3c836f9bad3b",
+          "839f9eee-d0d4-486d-bdc4-b9d97656e00f",
+          "e2fe6ded-81d9-48e8-8751-dbe2b076140b",
+          "a57ac890-5fe0-456e-9082-dea798eb2be5"
+        ]
+      },
+      "measured": {
+        "width": 506,
+        "height": 374
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "cdf0e47d-903e-4542-b17c-52536ed89600",
+      "type": "room",
+      "position": {
+        "x": 341.236,
+        "y": 268.609
+      },
+      "data": {
+        "label": "Temp storage 1",
+        "description": "",
+        "area": 15,
+        "privacy": 1,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#cccccc"
+      },
+      "measured": {
+        "width": 94,
+        "height": 94
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "31419e0c-c0d5-48e7-b978-b80dd720e54f",
+      "type": "room",
+      "position": {
+        "x": 622.128,
+        "y": -527.217
+      },
+      "data": {
+        "label": "Temp storage 2",
+        "description": "",
+        "area": 15,
+        "privacy": 1,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#cccccc"
+      },
+      "measured": {
+        "width": 94,
+        "height": 94
+      },
+      "selected": false,
+      "dragging": false,
+      "zIndex": 2
+    },
+    {
+      "id": "7fc3911b-1511-43d0-9935-87e0ddfc83fd",
+      "type": "group",
+      "position": {
+        "x": 57.718,
+        "y": -731.947
+      },
+      "zIndex": 0,
+      "draggable": true,
+      "data": {
+        "name": "Logistics",
+        "description": "",
+        "color": "#a2a1a5",
+        "memberIds": [
+          "c29750c2-9109-4a6c-b1f0-ce812e65f92d",
+          "cdf0e47d-903e-4542-b17c-52536ed89600",
+          "30f69497-b42a-4f54-be97-be5afd4099d0",
+          "31419e0c-c0d5-48e7-b978-b80dd720e54f",
+          "9cdb05bd-4f77-45ca-930c-c998db559a65"
+        ]
+      },
+      "measured": {
+        "width": 722,
+        "height": 713
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "30f69497-b42a-4f54-be97-be5afd4099d0",
+      "type": "room",
+      "position": {
+        "x": 1182.517,
+        "y": -2.999
+      },
+      "data": {
+        "label": "Temp storage 3",
+        "description": "",
+        "area": 15,
+        "privacy": 1,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#cccccc"
+      },
+      "measured": {
+        "width": 94,
+        "height": 94
+      },
+      "selected": false,
+      "dragging": false,
+      "zIndex": 2
+    },
+    {
+      "id": "fce22e30-377e-4046-9a34-92e2cf7e4e3a",
+      "type": "group",
+      "position": {
+        "x": 194.567,
+        "y": -97.587
+      },
+      "zIndex": 0,
+      "draggable": true,
+      "data": {
+        "name": "Vendor stalls group 1",
+        "description": "",
+        "color": "#fde68a",
+        "memberIds": [
+          "b2a6dff2-b839-4e51-9218-bb6db2de6e41",
+          "477d3c0b-e4e4-4d81-9072-9aa259cd0435",
+          "bdff0175-1d3a-46ec-91fe-5af4e8d3dae0",
+          "baa20042-4615-436b-900e-d512a7ea42bb",
+          "5ceeaeb3-73e9-47f9-a2a7-c66471f82e9a",
+          "42d9cc15-3cc5-4eef-8a3c-c86446f3f849"
+        ]
+      },
+      "measured": {
+        "width": 480,
+        "height": 441
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "571a8a8f-29d8-4592-8f8e-135e50ba8222",
+      "type": "group",
+      "position": {
+        "x": 307.830,
+        "y": -609.073
+      },
+      "zIndex": 0,
+      "draggable": true,
+      "data": {
+        "name": "Vendor stalls group 2",
+        "description": "",
+        "color": "#fde68a",
+        "memberIds": [
+          "6ef90d8f-f519-4a39-8fcd-f09641085ffb",
+          "eb27899b-1a05-4b14-9791-de65c0bce5e3",
+          "3e810cb3-6adf-4c1c-a299-540ffc91362a",
+          "290ba2fc-48f3-467b-aa33-d05046e238bd",
+          "1566ca0d-7f65-49cf-a5d2-55ad669fe010"
+        ]
+      },
+      "measured": {
+        "width": 508,
+        "height": 325
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "cec8ab29-7a15-4b3d-b45f-3d146fd0a668",
+      "type": "group",
+      "position": {
+        "x": 880.013,
+        "y": -252.096
+      },
+      "zIndex": 0,
+      "draggable": true,
+      "data": {
+        "name": "Vendor stalls group 3",
+        "description": "",
+        "color": "#fde68a",
+        "memberIds": [
+          "9e602329-428e-464d-9853-eb39d4791f42",
+          "9299f27e-9ccf-40d5-a98c-ae4d30d31ffe",
+          "aa9b3a17-ea02-4f9a-844a-98dc322c473f",
+          "74f3f119-5f26-4c66-a7e4-0c1a74b34f20",
+          "972683e0-ad8e-4840-bbb2-a72d4fdd79c5"
+        ]
+      },
+      "measured": {
+        "width": 318,
+        "height": 440
+      },
+      "selected": true,
+      "dragging": false
+    },
+    {
+      "id": "group-label-a9c2930d-4da7-4cf5-9311-598f29b09d6f",
+      "type": "groupLabel",
+      "position": {
+        "x": -474.114,
+        "y": 295.128
+      },
+      "zIndex": 3,
+      "draggable": true,
+      "data": {
+        "groupId": "a9c2930d-4da7-4cf5-9311-598f29b09d6f"
+      },
+      "measured": {
+        "width": 300,
+        "height": 77
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "group-label-7fc3911b-1511-43d0-9935-87e0ddfc83fd",
+      "type": "groupLabel",
+      "position": {
+        "x": 410.676,
+        "y": -725.034
+      },
+      "zIndex": 3,
+      "draggable": true,
+      "data": {
+        "groupId": "7fc3911b-1511-43d0-9935-87e0ddfc83fd"
+      },
+      "measured": {
+        "width": 80,
+        "height": 46
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "group-label-fce22e30-377e-4046-9a34-92e2cf7e4e3a",
+      "type": "groupLabel",
+      "position": {
+        "x": 582.881,
+        "y": 647.726
+      },
+      "zIndex": 3,
+      "draggable": true,
+      "data": {
+        "groupId": "fce22e30-377e-4046-9a34-92e2cf7e4e3a"
+      },
+      "measured": {
+        "width": 160,
+        "height": 46
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "group-label-571a8a8f-29d8-4592-8f8e-135e50ba8222",
+      "type": "groupLabel",
+      "position": {
+        "x": 904.130,
+        "y": -661.390
+      },
+      "zIndex": 3,
+      "draggable": true,
+      "data": {
+        "groupId": "571a8a8f-29d8-4592-8f8e-135e50ba8222"
+      },
+      "measured": {
+        "width": 160,
+        "height": 46
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "group-label-cec8ab29-7a15-4b3d-b45f-3d146fd0a668",
+      "type": "groupLabel",
+      "position": {
+        "x": 1121.482,
+        "y": -292.583
+      },
+      "zIndex": 3,
+      "draggable": true,
+      "data": {
+        "groupId": "cec8ab29-7a15-4b3d-b45f-3d146fd0a668"
+      },
+      "measured": {
+        "width": 160,
+        "height": 46
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "type": "room",
+      "position": {
+        "x": 752.957,
+        "y": -38.004
+      },
+      "data": {
+        "label": "Indoor circulation",
+        "description": "",
+        "area": 15,
+        "privacy": 0,
+        "facade": "Default",
+        "daylight": true,
+        "roomheight": 3,
+        "color": "#fff3c2"
+      },
+      "measured": {
+        "width": 94,
+        "height": 94
+      },
+      "selected": false,
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "89b1e138-0edc-42ce-bb36-001e76df72db",
+      "target": "d3862bb9-9010-421c-a2ab-9da1c4113790",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__89b1e138-0edc-42ce-bb36-001e76df72db-d3862bb9-9010-421c-a2ab-9da1c4113790",
+      "selected": false
+    },
+    {
+      "source": "89b1e138-0edc-42ce-bb36-001e76df72db",
+      "target": "5e093929-6ee1-4313-a29b-eaeb3c01da50",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__89b1e138-0edc-42ce-bb36-001e76df72db-5e093929-6ee1-4313-a29b-eaeb3c01da50",
+      "selected": false
+    },
+    {
+      "source": "89b1e138-0edc-42ce-bb36-001e76df72db",
+      "target": "dab0472d-7974-4777-b1a1-c8d8574048e9",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__89b1e138-0edc-42ce-bb36-001e76df72db-dab0472d-7974-4777-b1a1-c8d8574048e9",
+      "selected": false
+    },
+    {
+      "source": "cdf0e47d-903e-4542-b17c-52536ed89600",
+      "target": "baa20042-4615-436b-900e-d512a7ea42bb",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__cdf0e47d-903e-4542-b17c-52536ed89600-baa20042-4615-436b-900e-d512a7ea42bb",
+      "selected": false
+    },
+    {
+      "source": "cdf0e47d-903e-4542-b17c-52536ed89600",
+      "target": "bdff0175-1d3a-46ec-91fe-5af4e8d3dae0",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__cdf0e47d-903e-4542-b17c-52536ed89600-bdff0175-1d3a-46ec-91fe-5af4e8d3dae0",
+      "selected": false
+    },
+    {
+      "source": "31419e0c-c0d5-48e7-b978-b80dd720e54f",
+      "target": "6ef90d8f-f519-4a39-8fcd-f09641085ffb",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__31419e0c-c0d5-48e7-b978-b80dd720e54f-6ef90d8f-f519-4a39-8fcd-f09641085ffb",
+      "selected": false
+    },
+    {
+      "source": "eb27899b-1a05-4b14-9791-de65c0bce5e3",
+      "target": "31419e0c-c0d5-48e7-b978-b80dd720e54f",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__eb27899b-1a05-4b14-9791-de65c0bce5e3-31419e0c-c0d5-48e7-b978-b80dd720e54f",
+      "selected": false
+    },
+    {
+      "source": "477d3c0b-e4e4-4d81-9072-9aa259cd0435",
+      "target": "cdf0e47d-903e-4542-b17c-52536ed89600",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__477d3c0b-e4e4-4d81-9072-9aa259cd0435-cdf0e47d-903e-4542-b17c-52536ed89600",
+      "selected": false
+    },
+    {
+      "source": "b2a6dff2-b839-4e51-9218-bb6db2de6e41",
+      "target": "cdf0e47d-903e-4542-b17c-52536ed89600",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__b2a6dff2-b839-4e51-9218-bb6db2de6e41-cdf0e47d-903e-4542-b17c-52536ed89600",
+      "selected": false
+    },
+    {
+      "source": "cdf0e47d-903e-4542-b17c-52536ed89600",
+      "target": "5ceeaeb3-73e9-47f9-a2a7-c66471f82e9a",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__cdf0e47d-903e-4542-b17c-52536ed89600-5ceeaeb3-73e9-47f9-a2a7-c66471f82e9a",
+      "selected": false
+    },
+    {
+      "source": "42d9cc15-3cc5-4eef-8a3c-c86446f3f849",
+      "target": "cdf0e47d-903e-4542-b17c-52536ed89600",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__42d9cc15-3cc5-4eef-8a3c-c86446f3f849-cdf0e47d-903e-4542-b17c-52536ed89600",
+      "selected": false
+    },
+    {
+      "source": "31419e0c-c0d5-48e7-b978-b80dd720e54f",
+      "target": "3e810cb3-6adf-4c1c-a299-540ffc91362a",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__31419e0c-c0d5-48e7-b978-b80dd720e54f-3e810cb3-6adf-4c1c-a299-540ffc91362a",
+      "selected": false
+    },
+    {
+      "source": "31419e0c-c0d5-48e7-b978-b80dd720e54f",
+      "target": "290ba2fc-48f3-467b-aa33-d05046e238bd",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__31419e0c-c0d5-48e7-b978-b80dd720e54f-290ba2fc-48f3-467b-aa33-d05046e238bd",
+      "selected": false
+    },
+    {
+      "source": "31419e0c-c0d5-48e7-b978-b80dd720e54f",
+      "target": "1566ca0d-7f65-49cf-a5d2-55ad669fe010",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__31419e0c-c0d5-48e7-b978-b80dd720e54f-1566ca0d-7f65-49cf-a5d2-55ad669fe010",
+      "selected": false
+    },
+    {
+      "source": "30f69497-b42a-4f54-be97-be5afd4099d0",
+      "target": "9e602329-428e-464d-9853-eb39d4791f42",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__30f69497-b42a-4f54-be97-be5afd4099d0-9e602329-428e-464d-9853-eb39d4791f42",
+      "selected": false
+    },
+    {
+      "source": "30f69497-b42a-4f54-be97-be5afd4099d0",
+      "target": "aa9b3a17-ea02-4f9a-844a-98dc322c473f",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__30f69497-b42a-4f54-be97-be5afd4099d0-aa9b3a17-ea02-4f9a-844a-98dc322c473f",
+      "selected": false
+    },
+    {
+      "source": "30f69497-b42a-4f54-be97-be5afd4099d0",
+      "target": "74f3f119-5f26-4c66-a7e4-0c1a74b34f20",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__30f69497-b42a-4f54-be97-be5afd4099d0-74f3f119-5f26-4c66-a7e4-0c1a74b34f20",
+      "selected": false
+    },
+    {
+      "source": "972683e0-ad8e-4840-bbb2-a72d4fdd79c5",
+      "target": "30f69497-b42a-4f54-be97-be5afd4099d0",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__972683e0-ad8e-4840-bbb2-a72d4fdd79c5-30f69497-b42a-4f54-be97-be5afd4099d0",
+      "selected": false
+    },
+    {
+      "source": "30f69497-b42a-4f54-be97-be5afd4099d0",
+      "target": "9299f27e-9ccf-40d5-a98c-ae4d30d31ffe",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__30f69497-b42a-4f54-be97-be5afd4099d0-9299f27e-9ccf-40d5-a98c-ae4d30d31ffe",
+      "selected": false
+    },
+    {
+      "source": "9cdb05bd-4f77-45ca-930c-c998db559a65",
+      "target": "c29750c2-9109-4a6c-b1f0-ce812e65f92d",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__9cdb05bd-4f77-45ca-930c-c998db559a65-c29750c2-9109-4a6c-b1f0-ce812e65f92d",
+      "selected": false
+    },
+    {
+      "source": "b7a95aff-5622-4661-a947-fc64394fed3c",
+      "target": "c29750c2-9109-4a6c-b1f0-ce812e65f92d",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__b7a95aff-5622-4661-a947-fc64394fed3c-c29750c2-9109-4a6c-b1f0-ce812e65f92d",
+      "selected": false
+    },
+    {
+      "source": "89b1e138-0edc-42ce-bb36-001e76df72db",
+      "target": "963d5182-5456-4c40-8c61-3cd28e7b6585",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__89b1e138-0edc-42ce-bb36-001e76df72db-963d5182-5456-4c40-8c61-3cd28e7b6585",
+      "selected": false
+    },
+    {
+      "source": "89b1e138-0edc-42ce-bb36-001e76df72db",
+      "target": "a57ac890-5fe0-456e-9082-dea798eb2be5",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__89b1e138-0edc-42ce-bb36-001e76df72db-a57ac890-5fe0-456e-9082-dea798eb2be5",
+      "selected": false
+    },
+    {
+      "source": "89b1e138-0edc-42ce-bb36-001e76df72db",
+      "target": "87b0886f-98af-4f55-ae71-2598fd2e05cc",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__89b1e138-0edc-42ce-bb36-001e76df72db-87b0886f-98af-4f55-ae71-2598fd2e05cc",
+      "selected": false
+    },
+    {
+      "source": "89b1e138-0edc-42ce-bb36-001e76df72db",
+      "target": "a9c4e3c5-9ab8-4d1f-a2d7-f2b9d52ec69d",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__89b1e138-0edc-42ce-bb36-001e76df72db-a9c4e3c5-9ab8-4d1f-a2d7-f2b9d52ec69d",
+      "selected": false
+    },
+    {
+      "source": "89b1e138-0edc-42ce-bb36-001e76df72db",
+      "target": "47820030-0cd3-47a1-91f7-3c836f9bad3b",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__89b1e138-0edc-42ce-bb36-001e76df72db-47820030-0cd3-47a1-91f7-3c836f9bad3b",
+      "selected": false
+    },
+    {
+      "source": "89b1e138-0edc-42ce-bb36-001e76df72db",
+      "target": "839f9eee-d0d4-486d-bdc4-b9d97656e00f",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__89b1e138-0edc-42ce-bb36-001e76df72db-839f9eee-d0d4-486d-bdc4-b9d97656e00f",
+      "selected": false
+    },
+    {
+      "source": "89b1e138-0edc-42ce-bb36-001e76df72db",
+      "target": "e2fe6ded-81d9-48e8-8751-dbe2b076140b",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__89b1e138-0edc-42ce-bb36-001e76df72db-e2fe6ded-81d9-48e8-8751-dbe2b076140b",
+      "selected": false
+    },
+    {
+      "source": "3e810cb3-6adf-4c1c-a299-540ffc91362a",
+      "target": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__3e810cb3-6adf-4c1c-a299-540ffc91362a-791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "selected": false
+    },
+    {
+      "source": "290ba2fc-48f3-467b-aa33-d05046e238bd",
+      "target": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__290ba2fc-48f3-467b-aa33-d05046e238bd-791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "selected": false
+    },
+    {
+      "source": "1566ca0d-7f65-49cf-a5d2-55ad669fe010",
+      "target": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__1566ca0d-7f65-49cf-a5d2-55ad669fe010-791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "selected": false
+    },
+    {
+      "source": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "target": "eb27899b-1a05-4b14-9791-de65c0bce5e3",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__791ad2ba-3dc5-4877-ba9f-389db4b7061b-eb27899b-1a05-4b14-9791-de65c0bce5e3",
+      "selected": false
+    },
+    {
+      "source": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "target": "6ef90d8f-f519-4a39-8fcd-f09641085ffb",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__791ad2ba-3dc5-4877-ba9f-389db4b7061b-6ef90d8f-f519-4a39-8fcd-f09641085ffb",
+      "selected": false
+    },
+    {
+      "source": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "target": "9299f27e-9ccf-40d5-a98c-ae4d30d31ffe",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__791ad2ba-3dc5-4877-ba9f-389db4b7061b-9299f27e-9ccf-40d5-a98c-ae4d30d31ffe",
+      "selected": false
+    },
+    {
+      "source": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "target": "aa9b3a17-ea02-4f9a-844a-98dc322c473f",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__791ad2ba-3dc5-4877-ba9f-389db4b7061b-aa9b3a17-ea02-4f9a-844a-98dc322c473f",
+      "selected": false
+    },
+    {
+      "source": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "target": "9e602329-428e-464d-9853-eb39d4791f42",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__791ad2ba-3dc5-4877-ba9f-389db4b7061b-9e602329-428e-464d-9853-eb39d4791f42",
+      "selected": false
+    },
+    {
+      "source": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "target": "74f3f119-5f26-4c66-a7e4-0c1a74b34f20",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__791ad2ba-3dc5-4877-ba9f-389db4b7061b-74f3f119-5f26-4c66-a7e4-0c1a74b34f20",
+      "selected": false
+    },
+    {
+      "source": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "target": "972683e0-ad8e-4840-bbb2-a72d4fdd79c5",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__791ad2ba-3dc5-4877-ba9f-389db4b7061b-972683e0-ad8e-4840-bbb2-a72d4fdd79c5",
+      "selected": false
+    },
+    {
+      "source": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "target": "42d9cc15-3cc5-4eef-8a3c-c86446f3f849",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__791ad2ba-3dc5-4877-ba9f-389db4b7061b-42d9cc15-3cc5-4eef-8a3c-c86446f3f849",
+      "selected": false
+    },
+    {
+      "source": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "target": "5ceeaeb3-73e9-47f9-a2a7-c66471f82e9a",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__791ad2ba-3dc5-4877-ba9f-389db4b7061b-5ceeaeb3-73e9-47f9-a2a7-c66471f82e9a",
+      "selected": false
+    },
+    {
+      "source": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "target": "baa20042-4615-436b-900e-d512a7ea42bb",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__791ad2ba-3dc5-4877-ba9f-389db4b7061b-baa20042-4615-436b-900e-d512a7ea42bb",
+      "selected": false
+    },
+    {
+      "source": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "target": "bdff0175-1d3a-46ec-91fe-5af4e8d3dae0",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__791ad2ba-3dc5-4877-ba9f-389db4b7061b-bdff0175-1d3a-46ec-91fe-5af4e8d3dae0",
+      "selected": false
+    },
+    {
+      "source": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "target": "477d3c0b-e4e4-4d81-9072-9aa259cd0435",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__791ad2ba-3dc5-4877-ba9f-389db4b7061b-477d3c0b-e4e4-4d81-9072-9aa259cd0435",
+      "selected": false
+    },
+    {
+      "source": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "target": "b2a6dff2-b839-4e51-9218-bb6db2de6e41",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "open"
+      },
+      "id": "xy-edge__791ad2ba-3dc5-4877-ba9f-389db4b7061b-b2a6dff2-b839-4e51-9218-bb6db2de6e41",
+      "selected": false
+    },
+    {
+      "source": "89b1e138-0edc-42ce-bb36-001e76df72db",
+      "target": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__89b1e138-0edc-42ce-bb36-001e76df72db-791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "selected": false
+    },
+    {
+      "source": "89b1e138-0edc-42ce-bb36-001e76df72db",
+      "target": "b7a95aff-5622-4661-a947-fc64394fed3c",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__89b1e138-0edc-42ce-bb36-001e76df72db-b7a95aff-5622-4661-a947-fc64394fed3c",
+      "selected": false
+    },
+    {
+      "source": "b7a95aff-5622-4661-a947-fc64394fed3c",
+      "target": "791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "type": "floating",
+      "data": {
+        "kind": "connected",
+        "boundarystyle": "door"
+      },
+      "id": "xy-edge__b7a95aff-5622-4661-a947-fc64394fed3c-791ad2ba-3dc5-4877-ba9f-389db4b7061b",
+      "selected": false
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 import * as THREE from "three";
-import Field from "./field";
-import "../app.css";
+import Field from "@/shared/components/field";
+import "@/app/App.css";
 
 export function MeshInspector({ mesh }: { mesh: THREE.Mesh | null }) {
   const [, forceUpdate] = useState(0);
@@ -64,3 +64,4 @@ export function MeshInspector({ mesh }: { mesh: THREE.Mesh | null }) {
 }
 
 export default MeshInspector;
+

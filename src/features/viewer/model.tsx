@@ -2,7 +2,7 @@ import {type ThreeEvent } from "@react-three/fiber";
 import {useGLTF} from "@react-three/drei";
 import {useCallback, useRef, useEffect} from "react";
 import * as THREE from "three";
-import getMaterialRange from "../utils/getMaterialRange";
+import getMaterialRange from "./getMaterialRange";
 
 const highlightMaterial = new THREE.MeshStandardMaterial({
   color: '#f59e0b',

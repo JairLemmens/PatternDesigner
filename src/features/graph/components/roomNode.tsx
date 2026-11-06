@@ -4,7 +4,8 @@ import {
   type NodeProps,
   type Node,
 } from "@xyflow/react";
-import type { InspectorSchema } from "./inspectorFields";
+import type { InspectorSchema } from "@/shared/components/inspectorFields";
+import type { RoomNodeData } from "../model/graphTypes";
 
 export const RoomNodeInspector: InspectorSchema = {
   title: "Room",
@@ -22,22 +23,24 @@ export const RoomNodeInspector: InspectorSchema = {
 };
 
 function diameterFromArea(area: number) {
-  return Math.max(56, Math.min(170, Math.sqrt(Math.max(1, area)) * 18));
+  // Map scale is calibrated so this original-sized circle still covers area m².
+  return Math.sqrt(Math.max(0, area)) * 18;
 }
 
 export function roomNodeDiameter(node: Node) {
-  const area = Number((node.data as Record<string, any>).area ?? 15);
-  return Math.max(56, Math.min(170, Math.sqrt(Math.max(1, area)) * 18)) + 24;
+  const area = Number((node.data as RoomNodeData).area ?? 15);
+  return diameterFromArea(area);
 }
 
 export function RoomNode({ data, selected }: NodeProps) {
-  const groupSelected = Boolean((data as any).groupSelected);
-  const color = String((data as any).color ?? "#ffffff");
-  const area = Number((data as any).area ?? 15);
-  const daylight = Boolean((data as any).daylight ?? true);
+  const roomData = data as RoomNodeData;
+  const groupSelected = Boolean(roomData.groupSelected);
+  const groupSelectionGroupId = String(roomData.groupSelectionGroupId ?? "");
+  const color = String(roomData.color ?? "#ffffff");
+  const area = Number(roomData.area ?? 15);
+  const daylight = Boolean(roomData.daylight ?? true);
   const d = diameterFromArea(area);
-  const RING = 12;
-  const outer = d + RING * 2;
+  const outer = d;
   return (
     <div
       style={{
@@ -49,6 +52,24 @@ export function RoomNode({ data, selected }: NodeProps) {
         justifyContent: "center",
       }}
     >
+      {groupSelectionGroupId && (
+        <svg
+          aria-hidden="true"
+          className="group-select-hit-layer"
+          data-group-id={groupSelectionGroupId}
+          style={{ position: "absolute", width: "160%", height: "160%", overflow: "visible", pointerEvents: "none", zIndex: 1 }}
+        >
+          <circle
+            className="group-select-hit"
+            cx="50%"
+            cy="50%"
+            r="50%"
+            fill="transparent"
+            pointerEvents="all"
+          />
+        </svg>
+      )}
+
       <Handle
         type="source"
         position={Position.Top}
@@ -62,6 +83,24 @@ export function RoomNode({ data, selected }: NodeProps) {
           border: "none",
           borderRadius: "50%",
           pointerEvents: "all",
+          zIndex: 3,
+        }}
+      />
+
+      {/* The node body stays clickable above the connection handle. The exposed
+          outer band remains available for starting a connection. */}
+      <div
+        className="room-node-select-hit"
+        style={{
+          position: "absolute",
+          width: "84%",
+          height: "84%",
+          left: "8%",
+          top: "8%",
+          borderRadius: "50%",
+          background: "transparent",
+          pointerEvents: "all",
+          zIndex: 4,
         }}
       />
 
@@ -80,7 +119,7 @@ export function RoomNode({ data, selected }: NodeProps) {
         <circle
           cx={outer / 2}
           cy={outer / 2}
-          r={outer / 2 - 1}
+          r={Math.max(0, outer / 2 - 0.5)}
           fill="none"
           stroke={selected ? "var(--accent)" : "var(--primary)"}
           strokeWidth={1}
@@ -96,25 +135,26 @@ export function RoomNode({ data, selected }: NodeProps) {
           borderRadius: "50%",
           background: selected || groupSelected ? "var(--accent)": color,
           border: `2px solid ${daylight?"var(--background)":"var(--muted-foreground)"}`,
-          boxShadow:  "0 0 3px var(--muted-foreground)",
+          boxShadow: `0 0 ${d * 0.04}px var(--muted-foreground)`,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
           boxSizing: "border-box",
           position: "relative",
-          zIndex: 1,
+          zIndex: 0,
           pointerEvents: "auto",
         }}
       >
-        <div style={{ fontSize: 12, fontWeight: 500, textAlign: "center", textShadow: "0 0 5px var(--background)", color: "var(--foreground)", lineHeight: 1.15, maxWidth: "90%", overflowWrap: "anywhere" }}>
-          {String((data as any).label ?? "")}
+        <div style={{ fontSize: d * 0.12, fontWeight: 500, textAlign: "center", textShadow: "0 0 0.12em var(--background)", color: "var(--foreground)", lineHeight: 1.15, maxWidth: "90%", overflowWrap: "anywhere" }}>
+          {String(roomData.label ?? "")}
         </div>
-        <div style={{ fontSize: 10, color: "var(--background)",textShadow:"  0.0px 0.0px 5px var(--foreground)", fontFamily: "monospace" }}>
+        <div style={{ fontSize: d * 0.15, color: "var(--background)",textShadow:"0 0 0.12em var(--foreground)", fontFamily: "monospace" }}>
           {area} m²
         </div>
       </div>
     </div>
   );
 }
+
 

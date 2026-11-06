@@ -5,7 +5,7 @@ import {
   useInternalNode,
   type EdgeProps,
 } from "@xyflow/react";
-import type { InspectorSchema } from "./inspectorFields";
+import type { InspectorSchema } from "@/shared/components/inspectorFields";
 
 export const RoomNodeEdgeInspector: InspectorSchema = {
   title: "Connection",
@@ -45,11 +45,13 @@ export function RoomNodeEdge({ id, source, target, style, data, selected }: Edge
     <BaseEdge
       id={id}
       path={path}
+      interactionWidth={18}
       style={{
         stroke: selected ? "var(--accent)" : edgeColor,
-        strokeWidth: data?.boundarystyle ==="open"? 3:1 ,
+        strokeWidth: (data?.boundarystyle === "open" ? 3 : 1),
         ...style,
       }}
     />
   );
 }
+

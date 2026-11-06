@@ -15,13 +15,15 @@ import {
   type Connection,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
-import { useStore } from "@/lib/store";
-import {btnStyle } from "./components/ui";
-import { InspectorFields } from "./components/inspectorFields";
-import type { InspectorSchema } from "./components/inspectorFields";
+import { useStore } from "./model/projectStore";
+import {btnStyle } from "@/shared/components/ui";
+import { InspectorFields } from "@/shared/components/inspectorFields";
+import type { InspectorSchema } from "@/shared/components/inspectorFields";
 import { RoomNode, RoomNodeInspector, roomNodeDiameter } from './components/roomNode';
 import { RoomNodeEdge, RoomNodeEdgeInspector } from './components/roomNodeEdge';
-import { RoomNodeGroup, RoomNodeGroupInspector, GroupLabel, getGroupBounds, isPointInGroupMetaball } from './components/roomNodeGroup';
+import { RoomNodeGroup, RoomNodeGroupInspector, GroupLabel, GroupMetaballLayer, getGroupBounds, getGroupShapeLayout, groupLabelOffset, isPointInGroupMetaball } from './components/roomNodeGroup';
+import { OpenFreeMapViewer } from './components/openFreeMapViewer';
+import { downloadGraph, readGraph } from "./model/graphIO";
 
 const PROJECT_ID = "demo";
 
@@ -32,53 +34,6 @@ type GraphSelection = {
   id: string;
   inspector: InspectorSchema;
 };
-
-
-export async function readGraph(source: File | string): Promise<{ nodes: Node[]; edges: Edge[] }> {
-  const content = source instanceof File
-    ? await source.text()
-    : await fetch(source).then((response) => {
-        if (!response.ok) throw new Error(`Could not read graph from ${source}: ${response.statusText}`);
-        return response.text();
-      });
-
-  const parsed: unknown = JSON.parse(content);
-  if (
-    !parsed ||
-    typeof parsed !== "object" ||
-    !Array.isArray((parsed as { nodes?: unknown }).nodes) ||
-    !Array.isArray((parsed as { edges?: unknown }).edges)
-  ) {
-    throw new Error("Invalid graph file: expected nodes and edges arrays");
-  }
-
-  const graph = parsed as { nodes: Node[]; edges: Edge[] };
-  const loadedNodes = graph.nodes.map((node) => ({
-    ...node,
-    type: node.type === "group" ? "group" : node.type === "groupLabel" ? "groupLabel" : "room",
-  }));
-  for (const group of loadedNodes.filter((node) => node.type === "group")) {
-    const hasLabel = loadedNodes.some((node) => node.type === "groupLabel"
-      && (node.data as Record<string, any>).groupId === group.id);
-    if (hasLabel) continue;
-    const bounds = getGroupBounds(group, loadedNodes);
-    const position = bounds
-      ? { x: bounds.x, y: bounds.y - 44 }
-      : { x: group.position.x, y: group.position.y - 44 };
-    loadedNodes.push({
-      id: `group-label-${group.id}`,
-      type: "groupLabel",
-      position,
-      zIndex: 3,
-      draggable: true,
-      data: { groupId: group.id },
-    });
-  }
-  return {
-    nodes: loadedNodes,
-    edges: graph.edges.map((edge) => ({ ...edge, type: "floating" })),
-  };
-}
 
 
 function Toolbar({
@@ -141,8 +96,14 @@ export function GraphEditor() {
     id: string;
     position: { x: number; y: number };
     members: Array<{ id: string; position: { x: number; y: number } }>;
+    fromMember?: boolean;
   } | null>(null);
   const roomDragStart = useRef<{ id: string; position: { x: number; y: number } } | null>(null);
+
+  const clearFlowSelection = useCallback(() => {
+    setNodes((currentNodes) => currentNodes.map((node) => node.selected ? { ...node, selected: false } : node));
+    setEdges((currentEdges) => currentEdges.map((edge) => edge.selected ? { ...edge, selected: false } : edge));
+  }, [setEdges, setNodes]);
 
   const nodeTypes = useMemo(() => ({ room: RoomNode, group: RoomNodeGroup, groupLabel: GroupLabel }), []);
   const edgeTypes = useMemo(() => ({ floating: RoomNodeEdge }), []);
@@ -166,16 +127,18 @@ export function GraphEditor() {
   }, []);
 
   const displayNodes = useMemo(() => {
-    const renderedNodes = nodes.map((node) => {
-    if (node.type === "groupLabel") return { ...node, zIndex: 3, draggable: true };
+    const renderedNodes = nodes.filter((node) => node.type !== "groupLabel").map((node) => {
     if (node.type !== "group") {
+      const containingGroup = nodes.find((candidate) => candidate.type === "group"
+        && ((candidate.data as Record<string, any>).memberIds as string[] | undefined)?.includes(node.id));
       const selectedGroup = selected?.type === "node"
         ? nodes.find((candidate) => candidate.id === selected.id && candidate.type === "group")
         : undefined;
       const memberIds = (selectedGroup?.data as Record<string, any> | undefined)?.memberIds as string[] | undefined;
+      const isSelected = selected?.type === "node" && selected.id === node.id;
       return memberIds?.includes(node.id)
-        ? { ...node, zIndex: 2, data: { ...node.data, groupSelected: true } }
-        : { ...node, zIndex: 2 };
+        ? { ...node, draggable: true, dragHandle: ".room-node-select-hit, .group-select-hit", selected: Boolean(node.selected || isSelected), zIndex: 2, data: { ...node.data, groupSelected: true, groupSelectionGroupId: containingGroup?.id ?? "" } }
+        : { ...node, draggable: true, dragHandle: ".room-node-select-hit, .group-select-hit", selected: Boolean(node.selected || isSelected), zIndex: 2, data: { ...node.data, groupSelectionGroupId: containingGroup?.id ?? "" } };
     }
     const data = node.data as Record<string, any>;
     const frozenLayout = shiftHeld ? frozenGroupLayouts.current.get(node.id) : undefined;
@@ -185,51 +148,28 @@ export function GraphEditor() {
         position: frozenLayout.position,
         style: { width: frozenLayout.width, height: frozenLayout.height, pointerEvents: "none" as const },
         zIndex: 0,
-        draggable: true,
+        selectable: false,
+        draggable: false,
         selected: selected?.type === "node" && selected.id === node.id,
         data: { ...data, width: frozenLayout.width, height: frozenLayout.height, calculatedArea: frozenLayout.calculatedArea, memberShapes: frozenLayout.memberShapes },
       };
     }
     const members = nodes.filter((candidate) => data.memberIds?.includes(candidate.id));
-    const bounds = members.reduce((result, member) => {
-      const memberData = member.data as Record<string, any>;
-      const diameter = Math.max(56, Math.min(170, Math.sqrt(Math.max(1, Number(memberData.area ?? 15))) * 18)) + 24;
-      return {
-        minX: Math.min(result.minX, member.position.x),
-        minY: Math.min(result.minY, member.position.y),
-        maxX: Math.max(result.maxX, member.position.x + diameter),
-        maxY: Math.max(result.maxY, member.position.y + diameter),
-        area: result.area + Number(memberData.area ?? 0),
-      };
-    }, { minX: Infinity, minY: Infinity, maxX: -Infinity, maxY: -Infinity, area: 0 });
-    if (!members.length) return node;
-    const padding = 32;
-    const width = bounds.maxX - bounds.minX + padding * 2;
-    const height = bounds.maxY - bounds.minY + padding * 2;
-    const left = bounds.minX - padding;
-    const top = bounds.minY - padding;
-    const memberShapes = members.map((member) => {
-      const diameter = roomNodeDiameter(member);
-      return {
-        x: member.position.x - left + diameter / 2,
-        y: member.position.y - top + diameter / 2,
-        radius: diameter / 2 + 18,
-      };
-    });
+    const shapeLayout = getGroupShapeLayout(members);
+    if (!shapeLayout) return node;
+    const calculatedArea = members.reduce((sum, member) => sum + Number((member.data as Record<string, any>).area ?? 0), 0);
     const layout = {
-      position: { x: left, y: top },
-      width,
-      height,
-      calculatedArea: bounds.area,
-      memberShapes,
+      ...shapeLayout,
+      calculatedArea,
     };
     frozenGroupLayouts.current.set(node.id, layout);
     return {
       ...node,
       position: layout.position,
-      style: { width, height, pointerEvents: "none" as const },
+      style: { width: layout.width, height: layout.height, pointerEvents: "none" as const },
       zIndex: 0,
-      draggable: true,
+      selectable: false,
+      draggable: false,
       selected: selected?.type === "node" && selected.id === node.id,
       data: { ...data, ...layout },
     };
@@ -242,21 +182,26 @@ export function GraphEditor() {
       const isSelected = selected?.type === "node" && selected.id === groupId;
       return [{
         ...labelNode,
-        zIndex: 3,
+        zIndex: 2,
         draggable: true,
-        selected: isSelected,
+        selected: Boolean(labelNode.selected || isSelected),
         data: {
           ...(labelNode.data as Record<string, any>),
           name: groupData.name,
           description: groupData.description,
           color: groupData.color,
           calculatedArea: groupData.calculatedArea,
+          memberCount: ((groupData.memberIds as string[] | undefined) ?? []).length,
         },
       }];
     });
     return [...renderedNodes, ...labels];
   }, [nodes, shiftHeld, selected]);
-  const displayEdges = useMemo(() => edges.map((edge) => ({ ...edge, zIndex: 1 })), [edges]);
+  const displayEdges = useMemo(() => edges.map((edge) => ({
+    ...edge,
+    selected: Boolean(edge.selected || (selected?.type === "edge" && selected.id === edge.id)),
+    zIndex: 3,
+  })), [edges, selected]);
 
   useEffect(() => {
     readGraph('/Graph rochester.json')
@@ -278,6 +223,30 @@ export function GraphEditor() {
 
   const handleNodeDragStart = (_event: ReactMouseEvent, draggedNode: Node) => {
     if (draggedNode.type !== "group") {
+      const groupHit = (_event.target as Element | null)?.closest?.(".group-select-hit");
+      const groupId = groupHit?.closest(".group-select-hit-layer")?.getAttribute("data-group-id");
+      if (groupId) {
+        const group = nodes.find((node) => node.id === groupId && node.type === "group");
+        if (group) {
+          setNodes((currentNodes) => currentNodes.map((node) => node.id === draggedNode.id && node.selected
+            ? { ...node, selected: false }
+            : node));
+          setSelected((current) => current?.type === "node" && current.id === draggedNode.id ? null : current);
+          const memberIds = ((group.data as Record<string, any>).memberIds ?? []) as string[];
+          groupDragStart.current = {
+            id: draggedNode.id,
+            position: { ...draggedNode.position },
+            fromMember: true,
+            members: nodes
+              .filter((node) => memberIds.includes(node.id)
+                || (node.type === "groupLabel" && (node.data as Record<string, any>).groupId === groupId))
+              .map((node) => ({ id: node.id, position: { ...node.position } })),
+          };
+          roomDragStart.current = null;
+          return;
+        }
+      }
+      groupDragStart.current = null;
       roomDragStart.current = { id: draggedNode.id, position: { ...draggedNode.position } };
       return;
     }
@@ -285,6 +254,7 @@ export function GraphEditor() {
     groupDragStart.current = {
       id: draggedNode.id,
       position: { ...draggedNode.position },
+      fromMember: false,
       members: nodes
         .filter((node) => memberIds.includes(node.id)
           || (node.type === "groupLabel" && (node.data as Record<string, any>).groupId === draggedNode.id))
@@ -306,6 +276,15 @@ export function GraphEditor() {
   };
 
   const handleNodeDragStop = (event: ReactMouseEvent, draggedNode: Node) => {
+    if (groupDragStart.current?.fromMember && groupDragStart.current.id === draggedNode.id) {
+      groupDragStart.current = null;
+      roomDragStart.current = null;
+      setNodes((currentNodes) => currentNodes.map((node) => node.id === draggedNode.id && node.selected
+        ? { ...node, selected: false }
+        : node));
+      setSelected((current) => current?.type === "node" && current.id === draggedNode.id ? null : current);
+      return;
+    }
     if (draggedNode.type === "group") {
       groupDragStart.current = null;
       return;
@@ -446,7 +425,9 @@ export function GraphEditor() {
       const groupLabel: Node = {
         id: `group-label-${id}`,
         type: "groupLabel",
-        position: bounds ? { x: bounds.x, y: bounds.y - 44 } : { x: group.position.x, y: group.position.y - 44 },
+        position: bounds
+          ? { x: bounds.x, y: bounds.y - groupLabelOffset(members) }
+          : { x: group.position.x, y: group.position.y - groupLabelOffset(members) },
         zIndex: 3,
         draggable: true,
         data: { groupId: id },
@@ -518,14 +499,7 @@ export function GraphEditor() {
   };
 
   const exportGraph = () => {
-    const data = JSON.stringify({ nodes, edges }, null, 2);
-    const blob = new Blob([data], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "graph.json";
-    a.click();
-    URL.revokeObjectURL(url);
+    downloadGraph({ nodes, edges });
   };
 
   const importGraph = () => {
@@ -558,23 +532,44 @@ export function GraphEditor() {
           edgeTypes={edgeTypes}
           elevateNodesOnSelect={false}
           connectionMode={ConnectionMode.Loose}
-          multiSelectionKeyCode="Control"
+          multiSelectionKeyCode="Shift"
           onNodesChange={onNodesChange}
           onNodeDragStart={handleNodeDragStart}
           onNodeDrag={handleNodeDrag}
           onNodeDragStop={handleNodeDragStop}
           onEdgesChange={onEdgesChange}
           onConnect={onConnect}
-          onNodeClick={(_, n) => {
+          onNodeClick={(event, n) => {
+            if (n.type === "group") return;
+            const groupHit = (event.target as Element | null)?.closest?.(".group-select-hit");
+            if (groupHit) {
+              const groupId = groupHit.closest(".group-select-hit-layer")?.getAttribute("data-group-id");
+              if (groupId) {
+                clearFlowSelection();
+                setSelected({ type: "node", id: groupId, inspector: RoomNodeGroupInspector });
+                return;
+              }
+            }
             const id = n.type === "groupLabel" ? String((n.data as Record<string, any>).groupId) : n.id;
             const selectedNodeType = nodes.find((node) => node.id === id)?.type;
             setSelected({ type: "node", id, inspector: selectedNodeType === "group" ? RoomNodeGroupInspector : RoomNodeInspector });
           }}
           onEdgeClick={(_, e) => setSelected({ type: "edge", id: e.id, inspector: RoomNodeEdgeInspector })}
-          onPaneClick={() => setSelected(null)}
+          onPaneClick={() => {
+            clearFlowSelection();
+            setSelected(null);
+          }}
           fitView
+          nodeOrigin={[0, 0]}
+          minZoom={0.000001}
           proOptions={{ hideAttribution: true }}
         >
+          <OpenFreeMapViewer />
+          <GroupMetaballLayer
+            selectedGroupId={selected?.type === "node" && nodes.some((node) => node.id === selected.id && node.type === "group")
+              ? selected.id
+              : null}
+          />
           <Toolbar
           selected={selected}
           onAddNode={addNode}
@@ -633,6 +628,8 @@ export function GraphEditor() {
     </div>
   );
 }
+
+
 
 
 

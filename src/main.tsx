@@ -1,24 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { GraphEditor } from './GraphEditor'
-//import { Viewer } from "./Viewer";
-import {Viewer} from "./Viewer1";
-import "./app.css";
-
-// createRoot(document.getElementById('root')!).render(
-//   <StrictMode>
-//     <GraphEditor />
-//   </StrictMode>,
-// )
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { GraphEditor } from "@/features/graph/GraphEditor";
+import { Viewer } from "@/features/viewer/Viewer";
+import "@/app/App.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<GraphEditor />} />
-        <Route path="/viewer" element={<Viewer/>} />
+        <Route path="/viewer" element={<Viewer />} />
       </Routes>
     </BrowserRouter>
-  </StrictMode>
+  </StrictMode>,
 );

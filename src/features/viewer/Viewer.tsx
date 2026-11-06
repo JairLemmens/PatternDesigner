@@ -2,11 +2,11 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useState} from "react";
 import * as THREE from "three";
-import Model from './components/model';
-import MeshInspector from "./components/meshInspector"
-import ToggleGroup from "./components/toggleGroup";
-import PaintLayer from "./components/paintLayer";
-import ExpandingButton from "./components/expandingButton";
+import Model from './model';
+import MeshInspector from "./meshInspector"
+import ToggleGroup from "./toggleGroup";
+import PaintLayer from "./paintLayer";
+import ExpandingButton from "./expandingButton";
 
 const PALETTE = [
   "#f97316", "#3b82f6", "#10b981", "#a855f7",
@@ -63,4 +63,5 @@ export function Viewer() {
     </div>  
   )
 }
+
 
